@@ -1,0 +1,47 @@
+body
+  padding: 0
+  margin: 0
+
+.grid
+
+  max-width: 700px
+  margin-top: 100px
+  .item
+    height: 160px
+    width: 160px
+    border-radius: 5px
+    background-color: pink
+    margin-bottom: 10px
+    background:
+      position: center
+      size: cover
+
+    &:hover
+      background-color: red
+
+
+    &:nth-child(4n-5)
+      height: 50px
+    &:nth-child(2n)
+      height: 300px
+    &:nth-child(3n)
+      height: 120px
+
+  .item.visible
+    animation: itemlagi 600ms ease-in-out
+
+@keyframes items
+  0%
+    opacity: 0
+    transform: scale(0.3)
+  100%
+    opacity: 1
+
+@keyframes itemlagi
+  0%
+    width: 0
+  100%
+    width: 160px
+@keyframes itemsa
+  0%
+    transform: rotateY(30deg)
